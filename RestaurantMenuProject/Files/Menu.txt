@@ -1,0 +1,23 @@
+﻿Borsch
+Beetroot, 100
+Cabbage, 100
+Carrot, 50
+Cream, 100
+Garlic, 50
+Green, 50
+Onion, 50
+Pork, 200
+Potato, 300
+
+Dish Two
+Ingredient1, 50
+Ingredient2, 70
+Ingredient3, 40
+Ingredient4, 35
+ 
+Dish Three
+Ingredient1, 100
+Ingredient2, 200
+Ingredient3, 100
+Ingredient4, 70
+Green, 280
