@@ -17,11 +17,6 @@ namespace RestaurantMenuProject.FileOperations
             set { if (value != null) filePath = value; }
         }
 
-        public FileReader()
-        {
-            filePath = @"..\\..\\..\\Files\\Menu.txt";
-        }
-
         public FileReader(string filePath)
         {
             this.filePath = filePath;

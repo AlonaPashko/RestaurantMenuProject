@@ -1,16 +1,14 @@
 ﻿using RestaurantMenuProject.FileOperations;
 using RestaurantMenuProject.Interfaces;
 using RestaurantMenuProject.Servises;
-
-Menu productStorage = new Menu();
-
-FileReader fileReader = new FileReader();
-List<string> productNames = fileReader.ReadExpression();
+using System;
 
 
-productStorage.Products = productStorage.MakeDictionaryFromList(productNames);
 
-Console.WriteLine(productStorage);
- 
-//total price for each product
+Console.WriteLine("HI there");
 
+IngredientList ingrList = new IngredientList(@"..\\..\\..\\Files\\Menu.txt");
+Console.WriteLine(ingrList);
+
+//Parser make a dictionary and give it to IngredientList and to PriceList
+//realisation of FileParser: how to parse into dictionary more generalised
