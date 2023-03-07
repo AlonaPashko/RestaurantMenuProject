@@ -7,8 +7,12 @@ using System;
 
 Console.WriteLine("HI there");
 
-IngredientList ingrList = new IngredientList(@"..\\..\\..\\Files\\Menu.txt");
-Console.WriteLine(ingrList);
+Calculation calc1 = new Calculation(@"..\\..\\..\\Files\\Menu.txt", @"..\\..\\..\\Files\\Prices.txt");
 
-//Parser make a dictionary and give it to IngredientList and to PriceList
-//realisation of FileParser: how to parse into dictionary more generalised
+Console.WriteLine(calc1.PrintTotalCost());
+
+
+
+
+
+

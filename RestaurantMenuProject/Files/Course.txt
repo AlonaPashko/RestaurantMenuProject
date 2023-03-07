@@ -1,3 +1,3 @@
-﻿Euro: 0,21
-Dolar: 0,23
-Hryvnia: 8,47
+﻿Euro: 0.21
+Dolar: 0.23
+Hryvnia: 8.41
