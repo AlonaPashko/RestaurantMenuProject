@@ -27,17 +27,9 @@ namespace RestaurantMenuProject.Servises
         }
         public override string ToString()
         {
-            return "Ingredients list:\n\n" + PrintDictionary();
+            return "Ingredients list:\n\n" + PrintDictionary.PrintDict(Ingredients);
         }
-        public string PrintDictionary()
-        {
-            string line = "";
-            foreach (var ingr in Ingredients)
-            {
-                line += ingr.Key + " - " + ingr.Value.ToString() + "\n";
-            }
-            return line;
-        }
+        
 
         public void AddIngredient(string name, double weight)
         {
@@ -48,5 +40,7 @@ namespace RestaurantMenuProject.Servises
         {
             Ingredients.Remove(name);
         }
+
+      
     }
 }

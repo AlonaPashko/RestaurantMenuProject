@@ -28,18 +28,20 @@ namespace RestaurantMenuProject.Servises
         }
         public Calculation(IngredientList ingredients, PriceListWrapper priceList)
         {
-            Ingredients = ingredients; 
+            Ingredients = ingredients;
             Prices = priceList;
         }
         public override string ToString()
         {
-            return Ingredients.ToString();
+            return "TOTAL AMOUNT\n\n" + PrintDictionary.PrintDict(TotalAmount()) +
+                "\nPRICE LIST\n\n" + PrintDictionary.PrintDict(Prices.PriceList) +
+                "\nTOTAL COST\n\n" + PrintDictionary.PrintDict(TotalCost());
         }
         public Dictionary<string, double> TotalAmount()
         {
             foreach (var ingr in Ingredients.Ingredients)
             {
-                if(Ingredients.Ingredients.TryGetValue(ingr.Key, out double amount))
+                if (Ingredients.Ingredients.TryGetValue(ingr.Key, out double amount))
                 {
                     Ingredients.Ingredients[ingr.Key] = amount / index;
                 }
@@ -48,23 +50,22 @@ namespace RestaurantMenuProject.Servises
         }
         public Dictionary<string, double> TotalCost()
         {
-           //to do step by step and check 
-        }
-       
-        public string PrintTotalAmount()
-        {
-            Ingredients.Ingredients = TotalAmount();
-            string str = "Ingredient's total amount in kg\n";
-            str = str + "-----------------------\n" + Ingredients;
+            List<KeyValuePair<string, double>> ingrList = Ingredients.Ingredients.ToList<KeyValuePair<string, double>>();
+            List<KeyValuePair<string, double>> prList = Prices.PriceList.ToList<KeyValuePair<string, double>>();
+            Dictionary<string, double> totalCost = new Dictionary<string, double>();
+            double totalCostValue = 0;
 
-            return str;
+            for (int i = 0, j = 0; i < ingrList.Count; i++, j++)
+            {
+                if (ingrList[i].Key == prList[j].Key)
+                {
+                    totalCostValue = Math.Round((ingrList[i].Value * prList[j].Value), 4);
+                    totalCost.Add(ingrList[i].Key, totalCostValue);
+                    totalCostValue = 0;
+                }
+            }
+            return totalCost;
         }
-        public string PrintTotalCost()
-        {
-            Prices.PriceList = TotalCost();
-            string str = "------------------------\n";
-            str = str + "Ingredient's total cost in Polish złoty\n" + Prices;
-            return str;
-        }
+
     }
 }

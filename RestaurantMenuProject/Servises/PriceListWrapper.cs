@@ -27,16 +27,7 @@ namespace RestaurantMenuProject.Servises
         }
         public override string ToString()
         {
-            return "Price list:\n\n" + PrintDictionary();
-        }
-        public string PrintDictionary()
-        {
-            string line = "";
-            foreach (var item in PriceList)
-            {
-                line += item.Key + " - " + item.Value.ToString() + "\n";
-            }
-            return line;
+            return "Price list:\n\n" + PrintDictionary.PrintDict(PriceList);
         }
 
         public void AddPosition(string name, double price)
@@ -48,5 +39,6 @@ namespace RestaurantMenuProject.Servises
         {
             PriceList.Remove(name);
         }
+
     }
 }

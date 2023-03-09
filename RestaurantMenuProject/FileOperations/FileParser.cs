@@ -25,7 +25,7 @@ namespace RestaurantMenuProject.FileOperations
             {
                 if (IsDigit(list[i]))
                 {
-                    string[] seperators = { ",", "-", ":" };
+                    string[] seperators = { ",", "-", ":", " " };
                     string[] arr = list[i].Split(seperators, StringSplitOptions.RemoveEmptyEntries);
                     string key = arr[0].ToLower();
                     double value = double.Parse(arr[1]);

@@ -9,7 +9,9 @@ Console.WriteLine("HI there");
 
 Calculation calc1 = new Calculation(@"..\\..\\..\\Files\\Menu.txt", @"..\\..\\..\\Files\\Prices.txt");
 
-Console.WriteLine(calc1.PrintTotalCost());
+Console.WriteLine(calc1);
+
+
 
 
 
