@@ -15,9 +15,6 @@ namespace RestaurantMenuProject.Interfaces
 
         public Dictionary<string, double> TotalAmount();
         public Dictionary<string, double> TotalCost();
-        
-
-
-
+        public Dictionary<string, double> TotalCostWithCurrency();
     }
 }

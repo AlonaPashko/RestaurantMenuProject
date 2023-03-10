@@ -9,7 +9,13 @@ Console.WriteLine("HI there");
 
 Calculation calc1 = new Calculation(@"..\\..\\..\\Files\\Menu.txt", @"..\\..\\..\\Files\\Prices.txt");
 
-Console.WriteLine(calc1);
+//StartCalculation in program
+
+//in start calculation: new Calculation, new CurrencyList, new Currency
+
+
+
+
 
 
 
