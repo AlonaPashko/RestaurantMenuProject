@@ -7,11 +7,10 @@ using System;
 
 Console.WriteLine("HI there");
 
-Calculation calc1 = new Calculation(@"..\\..\\..\\Files\\Menu.txt", @"..\\..\\..\\Files\\Prices.txt");
+StartCalculation start = new StartCalculation(@"..\\..\\..\\Files\\Course.txt", @"..\\..\\..\\Files\\Menu.txt",
+    @"..\\..\\..\\Files\\Prices.txt");
 
-//StartCalculation in program
-
-//in start calculation: new Calculation, new CurrencyList, new Currency
+Console.WriteLine(start);
 
 
 

@@ -1,4 +1,4 @@
-﻿using RestaurantMenuProject.Enums;
+﻿
 using RestaurantMenuProject.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -13,7 +13,6 @@ namespace RestaurantMenuProject.Servises
     {
         public IIngredientList Ingredients { get; set; }
         public IPriceList Prices { get; set; }
-        public CurrencyEnum Currency { get; set; }
 
         const int index = 1000; //const for convert weight in gr into kg
 
@@ -26,7 +25,6 @@ namespace RestaurantMenuProject.Servises
         {
             Ingredients = new IngredientList(ingrFilePath);
             Prices = new PriceListWrapper(priceFilePath);
-            Currency = CurrencyEnum.Hryvnia;
         }
         public Calculation(IngredientList ingredients, PriceListWrapper priceList)
         {
@@ -36,10 +34,8 @@ namespace RestaurantMenuProject.Servises
 
         public override string ToString()
         {
-            return "TOTAL AMOUNT\n\n" + PrintDictionary.PrintDict(TotalAmount()) +
-                "\nPRICE LIST\n\n" + PrintDictionary.PrintDict(Prices.PriceList) +
-                "\nTOTAL COST\n\n" + PrintDictionary.PrintDict(TotalCost()) +
-                "\nTOTAL COST IN HRYVNIA\n\n" + PrintDictionary.PrintDict(TotalCostWithCurrency());
+            return "\nTOTAL AMOUNT\n\n" + PrintDictionary.PrintDict(TotalAmount()) +
+                "\nTOTAL COST\n\n" + PrintDictionary.PrintDict(TotalCost()); 
         }
         public Dictionary<string, double> TotalAmount()
         {
@@ -71,28 +67,27 @@ namespace RestaurantMenuProject.Servises
             return totalCost;
         }
 
-        public Dictionary<string, double> TotalCostWithCurrency()
+        public Dictionary<string, double> TotalCostWithCurrency(ICurrency currency)
         {
-            switch (Currency)
+            switch (currency.Name)
             {
-                case CurrencyEnum.Hryvnia:
+                case "hryvnia":
                     {
-                        double course = 8.41;
+                        double course = currency.CourseRelZloty;
                         return GetCurrDictionary(course);
                     }
-                case CurrencyEnum.Dolar:
+                case "dolar":
                     {
-                        double course = 0.21;
+                        double course = currency.CourseRelZloty;
                         return GetCurrDictionary(course);
                     }
-                case CurrencyEnum.Euro:
+                case "euro":
                     {
-                        double course = 0.23;
+                        double course = currency.CourseRelZloty;
                         return GetCurrDictionary(course);
                     }
                 default:  return TotalCost();
             }
-            //add a value of curr from file (fix value change to variable)
         }
         private Dictionary<string, double> GetCurrDictionary(double course)
         {
@@ -108,5 +103,7 @@ namespace RestaurantMenuProject.Servises
             }
             return currDict;
         }
+
+       
     }
 }

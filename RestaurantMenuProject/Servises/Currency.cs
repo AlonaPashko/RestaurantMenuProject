@@ -12,29 +12,24 @@ namespace RestaurantMenuProject.Servises
     {
         public string Name { get; set; }
         public double CourseRelZloty { get; set; }
-        Dictionary<string, double> Courses { get; set; }
+        
 
         public Currency()
         {
-            Name = "polish zloty";
+            Name = "Polish ZL";
             CourseRelZloty = 1;
-            Courses = new Dictionary<string, double>();
         }
 
         public Currency(string name, double course)
         {
             Name = name;
             CourseRelZloty = course;
-            Courses = new Dictionary<string, double>();
         }
-        public Currency(string filePath) 
-        {
-            FileParser fileParser = new FileParser(filePath);
-            Courses = fileParser.Parse();
-        }
+
         public override string ToString()
         {
-            return "Available currencies:\n\npolish zloty\n" + PrintDictionary.PrintDict(Courses);
+            return "Currency: " + Name + "Course relatively polish zloty: " 
+                + CourseRelZloty.ToString();
         }
     }
 }

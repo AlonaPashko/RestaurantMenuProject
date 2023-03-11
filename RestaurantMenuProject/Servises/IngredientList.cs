@@ -40,7 +40,5 @@ namespace RestaurantMenuProject.Servises
         {
             Ingredients.Remove(name);
         }
-
-      
     }
 }
