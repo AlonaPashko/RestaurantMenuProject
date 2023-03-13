@@ -1,0 +1,48 @@
+
+TOTAL AMOUNT
+
+beetroot - 0.1
+cabbage - 0.1
+carrot - 0.05
+cream - 0.1
+garlic - 0.05
+green - 0.33
+onion - 0.05
+pork - 0.2
+potato - 0.3
+ingredient1 - 0.15
+ingredient2 - 0.27
+ingredient3 - 0.14
+ingredient4 - 0.105
+
+TOTAL COST
+
+beetroot - 0.3
+cabbage - 0.1
+carrot - 0.1745
+cream - 1.2
+garlic - 0.35
+green - 0.495
+onion - 0.25
+pork - 4.4
+potato - 0.705
+ingredient1 - 1.8
+ingredient2 - 0.54
+ingredient3 - 0.84
+ingredient4 - 0.819
+
+TOTAL COST IN hryvnia:
+
+beetroot - 2.523
+cabbage - 0.841
+carrot - 1.4675
+cream - 10.092
+garlic - 2.9435
+green - 4.163
+onion - 2.1025
+pork - 37.004
+potato - 5.929
+ingredient1 - 15.138
+ingredient2 - 4.5414
+ingredient3 - 7.0644
+ingredient4 - 6.8878

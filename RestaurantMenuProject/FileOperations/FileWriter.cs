@@ -9,27 +9,26 @@ namespace RestaurantMenuProject.FileOperations
 {
     internal class FileWriter : IExpressionWriter
     {
-        private string filePath;
+      
+        public string FilePath { get; set; }
 
-        public string FilePath
-        {
-            get => filePath;
-            set { if (value != null) filePath = value; }
-        }
-
-        public FileWriter()
-        {
-            filePath = @"..\\..\\..\\Files\\AddedProducts.txt";
-        }
+        public FileWriter() : this (@"..\\..\\..\\Files\\Result.txt") { }
 
         public FileWriter(string filePath)
         {
-            this.filePath = filePath;
+            if (!File.Exists(filePath))
+            {
+                File.Create(filePath);
+            }
+            FilePath = filePath;
         }
 
-        public void WriteExpression(object obj, string filePath)
+        public void WriteExpression(object obj)
         {
-            throw new NotImplementedException();
+            using (StreamWriter writer = new StreamWriter(FilePath))
+            {
+                writer.Write(obj.ToString());
+            }
         }
     }
 }

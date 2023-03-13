@@ -8,6 +8,6 @@ namespace RestaurantMenuProject.Interfaces
 {
     internal interface IExpressionWriter
     {
-        void WriteExpression(object obj, string filePath);
+        void WriteExpression(object obj);
     }
 }

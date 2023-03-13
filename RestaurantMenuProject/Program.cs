@@ -10,7 +10,12 @@ Console.WriteLine("HI there");
 StartCalculation start = new StartCalculation(@"..\\..\\..\\Files\\Course.txt", @"..\\..\\..\\Files\\Menu.txt",
     @"..\\..\\..\\Files\\Prices.txt");
 
-Console.WriteLine(start);
+
+FileWriter fileWriter = new FileWriter();
+fileWriter.WriteExpression(start);
+
+
+//result into file Result.txt
 
 
 
