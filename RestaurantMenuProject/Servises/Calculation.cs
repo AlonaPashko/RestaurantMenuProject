@@ -35,7 +35,7 @@ namespace RestaurantMenuProject.Servises
         public override string ToString()
         {
             return "\nTOTAL AMOUNT\n\n" + PrintDictionary.PrintDict(TotalAmount()) +
-                "\nTOTAL COST\n\n" + PrintDictionary.PrintDict(TotalCost()); 
+                "\nTOTAL COST\n\n" + PrintDictionary.PrintDict(TotalCost());
         }
         public Dictionary<string, double> TotalAmount()
         {
@@ -86,7 +86,7 @@ namespace RestaurantMenuProject.Servises
                         double course = currency.CourseRelZloty;
                         return GetCurrDictionary(course);
                     }
-                default:  return TotalCost();
+                default: return TotalCost();
             }
         }
         private Dictionary<string, double> GetCurrDictionary(double course)
@@ -103,7 +103,5 @@ namespace RestaurantMenuProject.Servises
             }
             return currDict;
         }
-
-       
     }
 }

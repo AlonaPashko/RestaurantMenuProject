@@ -29,7 +29,6 @@ namespace RestaurantMenuProject.Servises
         {
             return "Ingredients list:\n\n" + PrintDictionary.PrintDict(Ingredients);
         }
-        
 
         public void AddIngredient(string name, double weight)
         {

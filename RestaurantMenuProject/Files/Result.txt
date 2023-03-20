@@ -10,10 +10,10 @@ green - 0.33
 onion - 0.05
 pork - 0.2
 potato - 0.3
-ingredient1 - 0.15
+ingredient1 - 0.185
 ingredient2 - 0.27
 ingredient3 - 0.14
-ingredient4 - 0.105
+ingredient4 - 0.07
 
 TOTAL COST
 
@@ -26,23 +26,21 @@ green - 0.495
 onion - 0.25
 pork - 4.4
 potato - 0.705
-ingredient1 - 1.8
+ingredient1 - 2.22
 ingredient2 - 0.54
 ingredient3 - 0.84
-ingredient4 - 0.819
 
-TOTAL COST IN hryvnia:
+TOTAL COST IN dolar:
 
-beetroot - 2.523
-cabbage - 0.841
-carrot - 1.4675
-cream - 10.092
-garlic - 2.9435
-green - 4.163
-onion - 2.1025
-pork - 37.004
-potato - 5.929
-ingredient1 - 15.138
-ingredient2 - 4.5414
-ingredient3 - 7.0644
-ingredient4 - 6.8878
+beetroot - 0.069
+cabbage - 0.023
+carrot - 0.0401
+cream - 0.276
+garlic - 0.0805
+green - 0.1138
+onion - 0.0575
+pork - 1.012
+potato - 0.1621
+ingredient1 - 0.5106
+ingredient2 - 0.1242
+ingredient3 - 0.1932

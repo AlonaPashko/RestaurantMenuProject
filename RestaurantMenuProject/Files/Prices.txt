@@ -10,7 +10,6 @@ Potato - 2.35
 Ingredient1 - 12
 Ingredient2 - 2
 Ingredient3 - 6
-Ingredient4 - 7.8
 Ingredient5 - 3.2
 Ingredient6 - 9.1
 Ingredient7 - 110

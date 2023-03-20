@@ -13,7 +13,7 @@ Dish Two
 Ingredient1, 50
 Ingredient2, 70
 Ingredient3, 40
-Ingredient4, 35
+Ingredient1, 35
  
 Dish Three
 Ingredient1, 100
